@@ -1,4 +1,5 @@
 import { ValidationPage } from './rules.js';
+import SuccessReg from './success-reg.js';
 
 const form = document.querySelector('form');
 const name = document.querySelector('#name');
@@ -13,6 +14,7 @@ const button = document.querySelector('button');
 const checkbox = document.querySelector('input[type="checkbox"]');
 
 const validationPage = new ValidationPage();
+const successReg = new SuccessReg();
 
 function validOrInvalid(elem, valid, errorElem, errorText) {
     const errors = validationPage.errors;
@@ -35,7 +37,7 @@ function validOrInvalid(elem, valid, errorElem, errorText) {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    alert('Registration successful!');
+    successReg.writeName(name.value + ' ' + surname.value);
 })
 
 name.addEventListener('input', () => {
