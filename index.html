@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="pop-up hidden">
+        <div class="pop-up-content">
+          <span class="close-button">&times;</span>
+          <h2>Success</h2>
+          <p>Registration successful!</p>
+          <div class="user-name">f</div>
+          <button class="close">Close</button>
+        </div>
+      </div>
+      <form action="" id="form">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">First Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+          <p class="error" id="name-error"></p><br />
+
+          <label for="surname">Surname:</label><br />
+          <input type="text" id="surname" name="surname" required /><br />
+          <p class="error" id="surname-error"></p><br />
+
+          <label for="email">Gmail:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          /><br />
+          <p class="error" id="email-error"></p><br />
+
+          <label for="password">Password:</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br />
+          <p class="error" id="password-error"></p><br />
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkbox" name="checkbox" title="show password">
+          <label for="checkbox"> Show/Hide Password</label>
+          </div>
+        </fieldset>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer></footer>
+    <script type="module" src="/validation/index.js"></script>
+  </body>
+</html>
